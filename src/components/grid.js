@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./grid.css";
 
 export default function Grid() {
   const GridChild = styled.div`
@@ -8,9 +9,32 @@ export default function Grid() {
     background-repeat: no-repeat;
     border-radius: 2px;
     transition: 0.2s;
-    filter: grayscale(70%);
-    &:hover {
-      filter: grayscale(0%);
+  `;
+
+  const GridChildText = styled.div`            
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30%;
+    width: 50%;
+    margin: auto;
+    opacity: 0%;
+    transition: .2s;
+    ${GridChild}:hover & {
+      opacity: 100%;
+    }
+  }}`;
+
+  const Filter = styled.div`
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0%;
+    transition: 0.2s;
+    ${GridChild}:hover & {
+      opacity: 50%;
     }
   `;
 
@@ -70,6 +94,7 @@ export default function Grid() {
     <Wrapper>
       {Object.keys(projectList).map((key) => (
         <GridChild
+          className="bruh"
           style={{
             backgroundImage: `url(${projectList[key].thumbnail})`,
           }}
@@ -77,7 +102,12 @@ export default function Grid() {
             window.open(projectList[key].url);
           }}
         >
-          {/* <a href={projectList[key].url} /> */}
+          <Filter />
+
+          <GridChildText>
+            <h4>{projectList[key].title}</h4>
+            <p>{projectList[key].description}</p>
+          </GridChildText>
         </GridChild>
       ))}
     </Wrapper>
