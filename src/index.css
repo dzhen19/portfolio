@@ -1,0 +1,10 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap");
+body {
+  font-family: "Inconsolata", monospace;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+.icon {
+  margin: 10px 15px;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #ff2323;
+}
