@@ -43,7 +43,7 @@ export default function Grid() {
     display: grid;
     grid-auto-rows: 23rem;
     grid-template-columns: 50% 1fr;
-    margin: 2rem;
+    margin: auto;
     grid-gap: 2rem;
     @media ${device.mobile} {
       grid-template-columns: 1fr;
@@ -98,7 +98,7 @@ export default function Grid() {
   };
 
   return (
-    <div style={{ margin: "auto" }}>
+    <div style={{ margin: "2rem" }}>
       <Wrapper>
         {Object.keys(projectList).map((key) => (
           <GridChild

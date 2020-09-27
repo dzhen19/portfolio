@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import "./intro.css";
+import { device } from "../device";
 
 export default function Intro() {
   const Tray = styled.div`
     margin: 20px;
     color: black;
+    text-align: center;
   `;
 
   const RedText = styled.div`
@@ -16,16 +18,26 @@ export default function Intro() {
   const IntroText = styled.div`
     font-size: 40px;
     font-family: Inconsolata;
+    @media ${device.mobile} {
+      font-size: 30px;
+    }
+  `;
+
+  const IntroDiv = styled.div`
+    padding: 5% 20%;
+    margin-bottom: 100px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    @media ${device.mobile} {
+      padding: 5% 10%;
+      text-align: block;
+    }
   `;
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <div
-        style={{
-          padding: "5% 20%",
-          marginBottom: "100px",
-        }}
-      >
+    <div>
+      <IntroDiv>
         <IntroText>
           <RedText>Hey I'm Derrick.</RedText> I'm a student at Swarthmore
           College building data-driven web apps.
@@ -68,9 +80,8 @@ export default function Intro() {
             <i class="fa fa-file fa-2x icon"></i>
           </a>
         </Tray>
-      </div>
-
-      <p>here's some stuff I've worked on: </p>
+      </IntroDiv>
+      <p style={{ textAlign: "center" }}>here's some stuff I've worked on: </p>
     </div>
   );
 }
