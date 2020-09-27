@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "./grid.css";
+import { device } from "../device";
 
 export default function Grid() {
   const GridChild = styled.div`
@@ -44,6 +45,12 @@ export default function Grid() {
     grid-template-columns: 50% 1fr;
     margin: 2rem;
     grid-gap: 2rem;
+    @media ${device.mobile} {
+      grid-template-columns: 1fr;
+    }
+    @media${device.laptop} {
+      max-width: 915px;
+    }
   `;
 
   const projectList = {
@@ -91,25 +98,27 @@ export default function Grid() {
   };
 
   return (
-    <Wrapper>
-      {Object.keys(projectList).map((key) => (
-        <GridChild
-          className="bruh"
-          style={{
-            backgroundImage: `url(${projectList[key].thumbnail})`,
-          }}
-          onClick={() => {
-            window.open(projectList[key].url);
-          }}
-        >
-          <Filter />
+    <div style={{ margin: "auto" }}>
+      <Wrapper>
+        {Object.keys(projectList).map((key) => (
+          <GridChild
+            className="bruh"
+            style={{
+              backgroundImage: `url(${projectList[key].thumbnail})`,
+            }}
+            onClick={() => {
+              window.open(projectList[key].url);
+            }}
+          >
+            <Filter />
 
-          <GridChildText>
-            <h4>{projectList[key].title}</h4>
-            <p>{projectList[key].description}</p>
-          </GridChildText>
-        </GridChild>
-      ))}
-    </Wrapper>
+            <GridChildText>
+              <h4>{projectList[key].title}</h4>
+              <p>{projectList[key].description}</p>
+            </GridChildText>
+          </GridChild>
+        ))}
+      </Wrapper>
+    </div>
   );
 }

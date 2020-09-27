@@ -27,32 +27,31 @@ export default function Intro() {
         }}
       >
         <IntroText>
-          <RedText>Hey I'm Derrick</RedText>, a student and full-stack developer
-          based in Swarthmore, PA.
+          <RedText>Hey I'm Derrick.</RedText> I'm a student at Swarthmore
+          College building data-driven web apps.
         </IntroText>
 
         <Tray>
+          <a
+            href="https://github.com/dzhen19"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-github fa-2x icon"></i>
+          </a>
+          <a
+            href="https://medium.com/@dzhen001"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-medium fa-2x icon"></i>
+          </a>
           <a
             href="https://www.linkedin.com/in/derrick-zhen-791b53195/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <i class="fa fa-linkedin fa-2x icon"></i>
-          </a>
-
-          <a
-            href="https://www.instagram.com/djznuts/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-instagram fa-2x icon"></i>
-          </a>
-          <a
-            href="https://app.joinhandshake.com/documents/19584025/download"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-file fa-2x icon"></i>
           </a>
           <a
             href="mailto: dzhen001@gmail.com"
@@ -61,10 +60,17 @@ export default function Intro() {
           >
             <i class="fa fa-envelope fa-2x icon"></i>
           </a>
+          <a
+            href="https://drive.google.com/file/d/1RtvuQiL-xr_k5TRNTsDqKH4pTlVAHoVB/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-file fa-2x icon"></i>
+          </a>
         </Tray>
       </div>
 
-      <small>here's some stuff I've made: </small>
+      <p>here's some stuff I've worked on: </p>
     </div>
   );
 }

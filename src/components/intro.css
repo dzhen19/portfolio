@@ -4,8 +4,10 @@
 
 a {
   color: #333;
+  opacity: 90%;
 }
 
 a:hover {
+  transition: 0.2s;
   color: #ff2323;
 }
