@@ -55,31 +55,31 @@ export default function Grid() {
 
   const projectList = {
     1: {
-      title: "Radiofeed",
-      url: "http://radiofeed.herokuapp.com",
-      thumbnail: "https://i.imgur.com/nLfr0sF.png",
+      title: "GPSled",
+      url: "http://gpsled.herokuapp.com",
+      thumbnail: "https://i.imgur.com/NA470Qy.jpg",
       description:
-        "Radiofeed helps Phildadelphia based on-air hosts research & write scripts efficiently.",
+        "A web app that tells you about sledding routes around your area!",
     },
     2: {
+      title: "Philly Bail Fund Data Analysis",
+      url: "https://phillybail.shinyapps.io/philly-bail/",
+      thumbnail: "https://handstandrecords.com/wp-content/uploads/2020/06/Logo-Philly-Bail-Fund.jpg",
+      description:
+        "Data analysis performed on data provided by the Philadelphia Bail Fund. Published w/R shiny.",
+    },
+    3: {
+      title: "Chief Humanity Officer",
+      url: "http://chofficer.netlify.app",
+      thumbnail: "https://i.imgur.com/ZGrf0N2.png",
+      description: "A blog about human happiness, run by a Swarthmore Alum",
+    },
+    4: {
       title: "TitanicRF",
       url: "http://titanicrf.herokuapp.com",
       thumbnail: "https://i.imgur.com/HvCIF3i.png",
       description:
         "TitanicRF uses random forests to determine how you would've fared on the Titanic.",
-    },
-    3: {
-      title: "Wellspring",
-      url: "http://joinwellspring.com",
-      thumbnail: "https://i.imgur.com/Vvt3j8T.png",
-      description:
-        "Front facing website for a Chicago based mental health startup",
-    },
-    4: {
-      title: "Chief Humanity Officer",
-      url: "http://chofficer.netlify.app",
-      thumbnail: "https://i.imgur.com/ZGrf0N2.png",
-      description: "A blog about human happiness, run by a Swarthmore Alum",
     },
     5: {
       title: "Open Source Data",

@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import "./intro.css";
 import { device } from "../device";
+import Typewriter from 'typewriter-effect';
+
+
 
 export default function Intro() {
   const Tray = styled.div`
@@ -39,9 +42,17 @@ export default function Intro() {
     <div>
       <IntroDiv>
         <IntroText>
-          <RedText>Hey I'm Derrick.</RedText> I'm a student at Swarthmore
+          <RedText>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Hey I'm Derrick")
+                  .start();
+              }}
+            />
+          </RedText> I'm a student at Swarthmore
           College building data-driven web apps.
         </IntroText>
+
 
         <Tray>
           <a
@@ -73,7 +84,7 @@ export default function Intro() {
             <i class="fa fa-envelope fa-2x icon"></i>
           </a>
           <a
-            href="https://drive.google.com/file/d/1RtvuQiL-xr_k5TRNTsDqKH4pTlVAHoVB/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ApoGc_UHyY3KxMEkzNt8Cs0sa4qpPCEN/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
