@@ -3,8 +3,20 @@ import styled from "styled-components";
 import "./intro.css";
 import { device } from "../device";
 import Typewriter from 'typewriter-effect';
+import { trayInfo } from "./trayFixtures"
 
 
+const TrayItem = (link, iconClassName) => {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class={iconClassName} style={{ fontSize: "2rem", marginRight: "5px", marginLeft: "5px" }}></i>
+    </a >
+  )
+}
 
 export default function Intro() {
   const Tray = styled.div`
@@ -49,47 +61,18 @@ export default function Intro() {
                   .start();
               }}
             />
-          </RedText> I'm a student at Swarthmore
-          College building data-driven web apps.
+          </RedText>
+          I'm a CS student at Swarthmore College and a Full Stack Engineer.
         </IntroText>
-
-
         <Tray>
-          <a
-            href="https://github.com/dzhen19"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-github fa-2x icon"></i>
-          </a>
-          <a
-            href="https://medium.com/@dzhen001"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-medium fa-2x icon"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/derrick-zhen-791b53195/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-linkedin fa-2x icon"></i>
-          </a>
-          <a
-            href="mailto: dzhen001@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-envelope fa-2x icon"></i>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1ApoGc_UHyY3KxMEkzNt8Cs0sa4qpPCEN/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa fa-file fa-2x icon"></i>
-          </a>
+          {
+            trayInfo.map(
+              ({ link, iconClassName }) => {
+                console.log(iconClassName)
+                return TrayItem(link, iconClassName)
+              }
+            )
+          }
         </Tray>
       </IntroDiv>
       <p style={{ textAlign: "center" }}>here's some stuff I've worked on: </p>
